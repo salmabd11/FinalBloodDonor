@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    tools:context=".UserProfile">
+    <ScrollView
+        android:id="@+id/Scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ProfileTXT"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:drawablePadding="15dp"
+                android:text="Your Profile"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="#880F88"/>
+
+
+            <ImageView
+                android:id="@+id/singleimageviewVA"
+                android:layout_width="match_parent"
+                android:layout_height="251dp"
+                android:src="@drawable/car1"
+                android:layout_below="@+id/ProfileTXT"
+                android:background="@drawable/imageback"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:layout_margin="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#B2F6B2"
+                android:padding="8dp"
+                android:layout_below="@+id/singleimageviewVA"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/txtNameVA"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/name"
+                    android:textAllCaps="true"
+                    android:text="Full Name"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    android:textColor="#880F88"/>
+                <TextView
+                    android:id="@+id/txtEmailVA"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/email"
+                    android:text="Email"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+
+
+                <TextView
+                    android:id="@+id/Etage"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/age"
+                    android:nextFocusDown="@id/Etgender"
+                    android:hint="Age +18"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/Etgender"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/gender"
+                    android:nextFocusDown="@id/EtEmail"
+                    android:hint="Gender"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/EtPhone"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/phone"
+                    android:nextFocusDown="@id/spinner"
+                    android:hint="Phone"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/Bloodgroup"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/blood"
+                    android:hint="Bloodgroup"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/EtDivision"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/division"
+                    android:nextFocusDown="@id/EtDistrict"
+                    android:hint="Division"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/EtDistrict"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/districe"
+                    android:nextFocusDown="@id/EtPoliceSt"
+                    android:hint="District"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/EtPoliceSt"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/police"
+                    android:nextFocusDown="@id/EtAddress"
+                    android:hint="Police Station"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/EtAddress"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="15dp"
+                    android:drawableLeft="@drawable/address"
+                    android:nextFocusDown="@id/SaveBTN"
+                    android:hint="Address"
+                    android:textSize="14dp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Scrollview"
+        android:padding="2dp"
+        android:background="#009688"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ButtonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/imageback"
+            android:text="Update"
+            android:padding="2dp"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimary"
+            />
+        <Button
+            android:id="@+id/DonorBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/imageback"
+            android:text="Donor List"
+            android:padding="2dp"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:textColor="@color/colorPrimary"
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilephoto"
+        android:onClick="ImageClick"
+        android:layout_marginStart="5dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profileimge"
+        app:civ_border_width="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        app:civ_border_color="#FF000000"/>
+
+    <LinearLayout
+        android:layout_below="@+id/profilephoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/EtName"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/Etage"
+            android:hint="Name"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/Etage"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/Etgender"
+            android:inputType="number"
+            android:hint="Age +18"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/Etgender"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/EtEmail"
+            android:hint="Gender"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/EtEmail"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:nextFocusDown="@id/EtPassword"
+            android:hint="Email"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/EtPassword"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:nextFocusDown="@id/EtPhone"
+            android:hint="Password"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/EtPhone"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/spinner"
+            android:hint="Phone"
+            android:inputType="number"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/EtDivision"
+            android:hint="Bloodgroup"
+            android:padding="8dp"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/EtDivision"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/EtDistrict"
+            android:hint="Division"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/EtDistrict"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/EtPoliceSt"
+            android:hint="District"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/EtPoliceSt"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/EtAddress"
+            android:hint="Police Station"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/EtAddress"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:nextFocusDown="@id/SaveBTN"
+            android:hint="Address"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textviewprogress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#C64F29"
+            android:text="0.00"/>
+
+        <ProgressBar
+            android:id="@+id/Progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp" />
+
+        <Button
+            android:id="@+id/SaveBTN"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Save Data"
+            android:layout_centerInParent="true"/>
+
+    </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>
